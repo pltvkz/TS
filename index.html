@@ -1,28 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#ffffff" />
-  <link rel="manifest" href="manifest.json" />
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="icon-192.png" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#6ef3c5">
   <title>Timer Sam</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Timer Sam</h1>
+  <div class="container">
+    <h1>Timer Sam</h1>
+    <div class="language-selector">
+      <label for="language">🌐 Language / Тіл / Язык:</label>
+      <select id="language">
+        <option value="kk">Қазақша</option>
+        <option value="ru" selected>Русский</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+    <div class="timer-display" id="timer">00:00</div>
+    <div class="section" id="settings-section">
+      <div class="section-title">Настройки таймера</div>
+      <div class="settings">
+        <div class="setting-box">
+          <div class="setting-title">Время работы (сек)</div>
+          <input type="number" id="input-work" value="45" min="1" />
+        </div>
+        <div class="setting-box">
+          <div class="setting-title">Время отдыха (сек)</div>
+          <input type="number" id="input-rest" value="15" min="1" />
+        </div>
+        <div class="setting-box">
+          <div class="setting-title">Количество упражнений</div>
+          <input type="number" id="input-sets" value="8" min="1" />
+        </div>
+        <div class="setting-box">
+          <div class="setting-title">Количество кругов</div>
+          <input type="number" id="input-rounds" value="1" min="1" />
+        </div>
+      </div>
+    </div>
+    <button class="start-button" id="start-button">▶ Старт</button>
+    <button class="save-button" id="save-button">💾 Сохранить</button>
+    <button class="end-button" id="end-button">⏹ Завершить</button>
+  </div>
 
-  <select id="language">
-    <option value="kk">Қазақша</option>
-    <option value="ru" selected>Русский</option>
-    <option value="en">English</option>
-  </select>
-
-  <div id="timer">00:00</div>
-
-  <button id="start">Старт</button>
-  <button id="stop">Завершить</button>
-  <button id="save">Сохранить</button>
+  <audio id="yerzhan" src="audio.m4a"></audio>
 
   <script src="script.js"></script>
 </body>

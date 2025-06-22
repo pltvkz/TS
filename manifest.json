@@ -1,10 +1,11 @@
 {
   "name": "Timer Sam",
   "short_name": "TimerSam",
-  "start_url": "./index.html",
+  "start_url": ".",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#ffffff",
+  "theme_color": "#6ef3c5",
+  "orientation": "portrait",
   "icons": [
     {
       "src": "icon-192.png",

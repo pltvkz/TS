@@ -107,10 +107,10 @@ function registerEvents() {
   document.getElementById("start-button").addEventListener("click", startTimer);
   document.getElementById("save-button").addEventListener("click", saveWorkout);
   document.getElementById("end-button").addEventListener("click", endWorkout);
-  languageSelect.addEventListener("change", () => {
-    saveWorkout();
-    location.reload();
-  });
+languageSelect.addEventListener("change", () => {
+  saveWorkout();
+  applyTranslation(languageSelect.value); // обновит текст без перезагрузки
+});
 }
 
 loadWorkout();
